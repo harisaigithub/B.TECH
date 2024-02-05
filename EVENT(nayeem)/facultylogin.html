@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+  body{ display: flex; justify-content: center; align-items: center;}.container { height: 80%; width: 75%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    </style>
+</head>
+<body>
+    <form class="container" id="loginForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        <br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        
+        <input type="submit" value="OK">
+    </form>
+
+    <script>
+        // JavaScript code to handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the values entered by the user
+            var enteredId = document.getElementById('id').value;
+            var enteredPassword = document.getElementById('password').value;
+
+            // Check if the entered ID and password match specific values
+            if (enteredId === '000000' && enteredPassword === '111111') {
+                // If they match, open a new link (replace 'your_link' with the actual URL)
+                window.location.href = 'Ev.html';
+            } else {
+                // If they don't match, you can show an error message or take another action
+                alert('Invalid ID or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

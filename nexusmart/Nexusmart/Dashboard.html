@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        
+        .students-card {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .courses-card {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .pass-card {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .attendance-card {
+            background-color: #f39c12;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card students-card">
+            <h2>Number of Students</h2>
+            <p>500</p>
+        </div>
+
+        <div class="card courses-card">
+            <h2>Number of Courses</h2>
+            <p>20</p>
+        </div>
+
+        <div class="card pass-card">
+            <h2>Pass Percentage</h2>
+            <p>85%</p>
+        </div>
+
+        <div class="card attendance-card">
+            <h2>Average Attendance Percentage</h2>
+            <p>62%</p>
+        </div>
+    </div>
+</body>
+</html>

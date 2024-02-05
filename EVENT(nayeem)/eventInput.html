@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+   <style> 
+body{ display: flex; justify-content: center; align-items: center;}.container { height: 80%; width: 75%; display: flex; flex-direction: column; justify-content: center; align-items: center;}h1{ text-align: center; font-family: 'Kanit', sans-serif; align-items: center;}label { display: block; font-family: 'Kanit', sans-serif;}input[type="text"],input[type="date"],input[type="time"],textarea,input[type="url"] {width: 100%; padding: 10px;margin-bottom: 15px;border: 1px solid #3f3030;   border-radius: 4px;}button {background-color: #007bff;  color: #fff;padding: 10px 20px;border: none;border-radius: 4px;cursor: pointer;}form{height: 90%;width: 100%;}button:hover { background-color: #0b641b;}
+   </style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container">
+            <div class="formm"></div>
+                <h1>Event Registration</h1>
+                <form id="EventForm" enctype="multipart/form-data">
+                    <label for="EventName">Event Name:</label>
+                    <input type="text" id="EventName" name="EventName" required><br><br>
+        
+                    <label for="EventDate">Event Date:</label>
+                    <input type="date" id="EventDate" name="EventDate" required><br><br>
+        
+                    <label for="EventTime">Event Time:</label>
+                    <input type="time" id="EventTime" name="EventTime" required><br><br>
+        
+                    <label for="EventDescription">Event Description:</label>
+                    <textarea id="EventDescription" name="EventDescription" rows="5" required></textarea><br><br>
+        
+                    <label for="EventAddress">Event Address:</label>
+                    <input type="text" id="EventAddress" name="EventAddress" required><br><br>
+        
+                    <label for="EventLink">Registration Link:</label>
+                    <input type="url" id="EventLink" name="EventLink" ><br><br>
+
+                    <label for="EventTumbil">Event Photos:</label>
+                    <input type="file" id="EventTumbil" accept="image/*" name="EventPhotos" single>
+        
+                    <label for="EventPhotos">Event Photos:</label>
+                    <input type="file" id="EventPhotos" accept="image/*" name="EventPhotos" multiple><br><br>
+        
+                    <button type="submit" value="Upload">Register</button>
+                </form>
+          </div>
+  
+    <script>
+        // Get references to HTML elements
+const EventForm = document.getElementById('eventForm');
+// Event listener for form submission
+EventForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Get values from the form fields
+    const EventName = document.getElementById('EventName').value;
+    const EventDate = document.getElementById('EventDate').value;
+    const EventTime = document.getElementById('EventTime').value;
+    const EventDescription = document.getElementById('EventDescription').value;
+    const EventAddress = document.getElementById('EventAddress').value;
+    const EventLink = document.getElementById('EventLink').value;
+    const EventTumbilInput = document.getElementById('EventTumbil');
+    const EventTumbil = EventPhotosInput.files;
+    // Get the selected photos (an array of File objects)
+    const EventPhotosInput = document.getElementById('EventPhotos');
+    const EventPhotos = EventPhotosInput.files;
+    // Display the entered data (including photos)
+    console.log('Event Name:', EventName);
+    console.log('Event Date:', EventDate);
+    console.log('Event Time:', EventTime);
+    console.log('Event Description:', EventDescription);
+    console.log('Event Address:', EventAddress);
+    console.log('EventLink:', EventLink);
+    console.log('EventTumbil :', EventTumbil);
+    // Display the selected photos (in a real application, you would handle the file upload)
+    for (let i = 0; i < EventPhotos.length; i++) {
+        const photo = EventPhotos[i];
+        console.log('Selected Photo', i + 1, ':', photo.name);
+    }
+    // Reset the form
+    EventForm.reset();
+});
+    </script>
+</body>
+</html>

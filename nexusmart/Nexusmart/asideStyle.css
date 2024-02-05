@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+#side-nav {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    transition: width 0.3s;
+    margin-right: 260px;
+}
+
+.main-menu {
+    padding: 20px;
+}
+
+.main-menu img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+    border-left: 4px solid transparent;
+}
+
+ul li.active a {
+    background-color: #555;
+    border-left-color: #ff9800;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+}
+#content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Footer styles */
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.card-footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #side-nav {
+        width: 0;
+    }
+    .container {
+        margin-left: 0;
+    }
+}

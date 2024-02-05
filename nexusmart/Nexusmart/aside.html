@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="asideStyle.css">
+    <script>
+      function loadContent(page) {
+            // Make an XMLHttpRequest to fetch the content of the selected page
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Display the fetched content in a container
+                    document.getElementById('content-container').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open('GET', page + '.html', true);
+            xhr.send();
+        }
+
+
+      </script>
+</head>
+<body>
+    <div id="side-nav">
+        <div class="main-menu">
+            <div class="top-side text-center py-4" style="background-image: url('img/dotted.jpg');">
+                <div class="desktop-hide">
+                    <div class="toggle-btn" onclick="toggleSidebar()">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <img src="Nexusmart Logo.png" width="150px" alt="Logo Django LMS">
+                <!-- <p class="text-orange">
+                    <mark>
+                        <i class="far fa-hand-point-right"></i>
+                        Your User Role
+                    </mark>
+                </p> -->
+            </div>
+            <!-- Navigation Links -->
+            <ul>
+                <li class="active">
+                    <a href="#" id="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user-tie"></i>Admin Panel</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-chalkboard-teacher"></i>Lecturers</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user-graduate"></i>Students</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-book"></i>My Courses</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-book-open"></i>Programs & Courses</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-check-double"></i>Complete Exams</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-record-vinyl"></i>Quiz Progress Rec</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-tasks"></i>Course Allocation</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-calendar-week"></i>Manage Session</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-calendar-alt"></i>Manage Semester</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-table"></i>Manage Score</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-record-vinyl"></i>Quiz Progress Rec</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-page4"></i>Grade Results</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-spell-check"></i>Assesment Results</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-plus"></i>Add & Drop Course</a>
+                </li>
+                <!-- Other Links -->
+                <br />
+                <p class="ml-3">&RightArrow; Others</p>
+                <li>
+                    <a href="#"><i class="fas fa-cogs"></i>Account Setting</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-key"></i>Change Password</a>
+                </li>
+            </ul>
+            
+        </div>
+
+        
+        <ul>
+            <li><a href="#" onclick="loadPage('asideJS.js')">Dashboard</a></li>
+            <li><a href="#" onclick="loadContent('Login')">Home</a></li>
+            
+        </ul>
+    </div>
+    <div id="content-container">
+         
+    </div>
+    <div id="content">
+        <div id="page-content">
+           
+        </div>
+    </div>
+    
+</body>
+</html>

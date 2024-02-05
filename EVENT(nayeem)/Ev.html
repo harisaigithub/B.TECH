@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Managment</title>
+    <style>
+        body{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .box{
+            height: 70%;
+            width: 75%;
+            background-color: #eef4ed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7%;
+        }
+        .box1,.box2,.box3{
+            height: 50px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2%;
+            color: white;
+            cursor: pointer;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;  
+        }
+        .box1{
+            background-color:#01a475 ;
+        }
+        .box2{
+            background-color:#058ff4 ;
+        }
+        .box3{
+            background-color: #b30027;
+        }
+        a{
+            text-decoration: none;  
+            color: white;
+        }
+        @media (max-width: 900px) {
+            .box{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"><a href="eventInput.html">CREATE EVENT</a></div>
+        <div class="box2">MODIFY EVENT</div>
+        <div class="box3">DELETE EVENT</div>
+    </div>
+    
+</body>
+</html>
